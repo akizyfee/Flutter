@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:first_app/style_text.dart';
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
 
   @override
-  Widget build(ctx) {
+  Widget build(context) {
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -16,15 +17,7 @@ class GradientContainer extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
       ),
-      child: const Center(
-        child: Text(
-          '嗨 pause',
-          style: TextStyle(
-            color: Color.fromARGB(66, 33, 47, 153),
-            fontSize: 28,
-          ),
-        ),
-      ),
+      child: const Center(child: StyleText()),
     );
   }
 }
