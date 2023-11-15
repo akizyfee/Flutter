@@ -5,22 +5,21 @@ const starAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(this.colors, {super.key});
+
+  final Color colors;
 
   @override
   Widget build(context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(137, 158, 35, 35),
-            Color.fromARGB(136, 126, 100, 100)
-          ],
+          colors: [colors],
           begin: starAlignment,
           end: endAlignment,
         ),
       ),
-      child: Center(child: StyleText('hi')),
+      child: const Center(child: StyleText('hi')),
     );
   }
 }
